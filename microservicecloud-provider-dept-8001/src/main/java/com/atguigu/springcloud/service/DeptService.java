@@ -11,4 +11,5 @@ public interface DeptService
 	public Dept get(Long id);
 
 	public List<Dept> list();
+	
 }
