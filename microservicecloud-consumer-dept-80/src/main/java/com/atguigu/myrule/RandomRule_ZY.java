@@ -1,6 +1,7 @@
 package com.atguigu.myrule;
 
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import com.netflix.client.config.IClientConfig;
 import com.netflix.loadbalancer.AbstractLoadBalancerRule;
@@ -20,7 +21,10 @@ public class RandomRule_ZY extends AbstractLoadBalancerRule
 	private int total = 0; 			// 总共被调用的次数，目前要求每台被调用5次
 	private int currentIndex = 0;	// 当前提供服务的机器号
 
-	public Server choose(ILoadBalancer lb, Object key)
+	//private AtomicInteger total = new AtomicInteger(0);
+	//private AtomicInteger currentIndex = new AtomicInteger(0);
+
+	public  Server choose(ILoadBalancer lb, Object key)
 	{
 		if (lb == null) {
 			return null;
@@ -71,8 +75,9 @@ public class RandomRule_ZY extends AbstractLoadBalancerRule
 				Thread.yield();
 				continue;
 			}
-
 			if (server.isAlive()) {
+				System.out.println(currentIndex+"-------"+total);
+
 				return (server);
 			}
 
@@ -80,6 +85,7 @@ public class RandomRule_ZY extends AbstractLoadBalancerRule
 			server = null;
 			Thread.yield();
 		}
+		System.out.println(currentIndex+"&&&&&&&&&&&&&&&&&&&&&&&&&&&&");
 
 		return server;
 

@@ -18,4 +18,7 @@ public class DeptConsumer80_App
 	{
 		SpringApplication.run(DeptConsumer80_App.class, args);
 	}
+	
+	//http://localhost/consumer/dept/list
+	//http://localhost/consumer/dept/discovery
 }

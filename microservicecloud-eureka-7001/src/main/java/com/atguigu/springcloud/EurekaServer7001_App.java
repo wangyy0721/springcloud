@@ -13,4 +13,6 @@ public class EurekaServer7001_App
 		SpringApplication.run(EurekaServer7001_App.class, args);
 	}
 	//   http://localhost:7001/
+    //  http://eureka7001.com:7001/
+	//  http://eureka7001.com:7001/
 }

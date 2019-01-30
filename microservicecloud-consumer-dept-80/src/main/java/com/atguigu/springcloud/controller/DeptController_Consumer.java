@@ -49,5 +49,12 @@ public class DeptController_Consumer
 	{
 		return restTemplate.getForObject(REST_URL_PREFIX + "/dept/discovery", Object.class);
 	}
+	
+	@SuppressWarnings("unchecked")
+	@RequestMapping(value = "/consumer/dept/test")
+	public Object test()
+	{
+		return restTemplate.getForObject(REST_URL_PREFIX + "/dept/test", Object.class);
+	}
 
 }
