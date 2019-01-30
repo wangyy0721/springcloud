@@ -50,6 +50,6 @@ INSERT INTO dept(dname,db_source) VALUES('市场部',DATABASE());
 INSERT INTO dept(dname,db_source) VALUES('运维部',DATABASE());
  
 SELECT * FROM dept;
-
+---20190130分子提交
 
 -
