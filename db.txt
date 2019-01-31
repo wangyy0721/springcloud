@@ -50,6 +50,14 @@ INSERT INTO dept(dname,db_source) VALUES('市场部',DATABASE());
 INSERT INTO dept(dname,db_source) VALUES('运维部',DATABASE());
  
 SELECT * FROM dept;
---手动处理
 
--
+
+----------------------Host  文件添加----------------------------------------
+# springcloud开发环境
+127.0.0.1 eureka7001.com
+127.0.0.1 eureka7002.com
+127.0.0.1 eureka7003.com
+127.0.0.1 myzuul.com
+127.0.0.1 config-3344.com
+127.0.0.1 client-config.com
+
