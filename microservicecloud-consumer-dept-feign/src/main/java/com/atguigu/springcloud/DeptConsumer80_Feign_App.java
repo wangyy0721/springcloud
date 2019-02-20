@@ -16,4 +16,5 @@ public class DeptConsumer80_Feign_App
 	{
 		SpringApplication.run(DeptConsumer80_Feign_App.class, args);
 	}
+	//http://localhost/consumer/dept/list
 }
