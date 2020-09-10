@@ -1,4 +1,4 @@
--------------------创建数据库脚本语句------
+-------------------创建数据库脚本语句-1-----
 -------------------8001sql脚本--------
 DROP DATABASE IF EXISTS cloudDB01;
 CREATE DATABASE cloudDB01 CHARACTER SET UTF8;
